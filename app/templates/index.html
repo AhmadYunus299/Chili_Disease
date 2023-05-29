@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Chilli Ins </title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href={{ url_for('static', filename='img/gallery/logo-icon.png') }}>
+    <link rel="icon" type="image/png" sizes="32x32" href={{ url_for('static', filename='img/gallery/logo-icon.png') }}>
+    <link rel="icon" type="image/png" sizes="16x16" href={{ url_for('static', filename='img/gallery/logo-icon.png') }}>
+    <link rel="shortcut icon" type="image/x-icon" href={{ url_for('static', filename='/img/gallery/logo-icon.png') }}>
+    <link rel="manifest" href={{ url_for('static', filename='/img/favicons/manifest.json') }}>
+    <meta name="msapplication-TileImage" content={{ url_for('static', filename='/img/favicons/mstile-150x150.png') }}>
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href={{url_for('static', filename = 'css/theme.min.css') }} rel="stylesheet" />
+
+  </head>
+
+  <body>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 bg-light opacity-85" data-navbar-on-scroll="data-navbar-on-scroll">
+        <div class="container"><a class="navbar-brand" href="index.html"><img class="d-inline-block align-top img-fluid" src={{ url_for('static', filename='img/gallery/logo-icon.png')}} alt="" width="50" /><span class="text-theme font-monospace fs-4 ps-1">Ins</span></a><button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item px-2"><a class="nav-link fw-medium active" aria-current="page" href="#Home">Home</a></li>
+              <li class="nav-item px-2"><a class="nav-link fw-medium" href="#Descriptions">Descriptions</a></li>
+              <li class="nav-item px-2"><a class="nav-link fw-medium" href="#Detection">Detection</a></li>
+              <li class="nav-item px-2"><a class="nav-link fw-medium" href="#News">News</a></li>
+              <li class="nav-item px-2"><a class="nav-link fw-medium" href="#Team">Team</a></li>
+              <li class="nav-item px-2"><a class="nav-link fw-medium" href="#About">About </a></li>
+            </ul>
+            <!-- <div class="container"><a class="navbar-brand" href="index.html"><img class="d-inline-block align-top img-fluid" src="static/img/gallery/logo-icon1.png" alt="" width="50" /><span class="text-theme font-monospace fs-4 ps-1">Ins</span></a><button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> -->
+            <!-- <form class="d-flex"><button class="btn btn-lg btn-dark bg-gradient order-0" type="submit">Welcome</button></form> -->
+          </div>
+        </div>
+      </nav>
+      <section class="py-0" id="Home">
+        <div class="bg-holder d-none d-md-block" style="background-image:url(static/img/illustrations/hero-header.png);background-position:right top;background-size:contain;"></div>
+        <!--/.bg-holder-->
+        <div class="bg-holder d-md-none" style="background-image:url(static/img/illustrations/hero-bg.png);background-position:right top;background-size:contain;"></div>
+        <!--/.bg-holder-->
+        <div class="container">
+          <div class="row align-items-center min-vh-75 min-vh-lg-100">
+            <div class="col-md-7 col-lg-6 col-xxl-5 py-6 text-sm-start text-center">
+              <h1 class="fw-semi-bold mb-4">Deteksi&nbsp;<span class="text-success"> Penyakit </span> &nbsp; Pada Daun Cabai</h1>
+              <!-- <h1 class="mt-6 mb-sm-4 fw-semi-bold lh-sm fs-4 fs-lg-5 fs-xl-6">Deteksi Penyakit Pada Daun Cabai<br class="d-block d-lg-block" /></h1> -->
+              <p class="mb-4 fs-1">Penyakit yang menyerang tanaman daun cabai biasanya disebabkan oleh virus, bakteri, cendawan maupun jamur. Pada blog ini anda bisa mengidentifikasi penyakit pada daun cabai dengan sangat mudah.</p><a class="btn btn-lg btn-success" href="#Detection" role="button">Deteksi Tanaman</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-5" id="Descriptions">
+        <div class="bg-holder d-none d-sm-block" style="background-image:url(static/img/illustrations/bg.png);background-position:top left;background-size:225px 755px;margin-top:-17.5rem;"></div>
+        <!--/.bg-holder-->
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-9 mx-auto text-center mb-3">
+              <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Pengetahuan</h5>
+              <p class="mb-5">Berikut beberapa penjelasan mengenai penyakit pada daun cabai yang membantu anda mengenali lebih dalam tentang penyakit daun cabai.</p>
+            </div>
+          </div>
+          <div class="row flex-center h-100">
+            <div class="col-xl-9">
+              <div class="row">
+                <div class="col-md-4 mb-5">
+                  <div class="card h-100 shadow px-4 px-md-2 px-lg-3 card-span pt-6">
+                    <div class="text-center text-md-start card-hover"><img class="ps-3 icons" src={{ url_for('static', filename='/img/icons/planting.svg') }} height="60" alt="" />
+                      <div class="card-body">
+                        <h6 class="fw-bold fs-1 heading-color">Bercak daun</h6>
+                        <p class="mt-3 mb-md-0 mb-lg-2">Penyakit bercak daun yang menyerang tanaman cabai disebabkan jamur cercospora capsici. Gejalanya, muncul bercak-bercak bundar berwarna abu-abu dengan pinggiran cokelat pada daun. Bila serangan jamur tersebut hebat, daun akan berwarna kuning dan akhirnya berguguran.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                  <div class="card h-100 shadow px-4 px-md-2 px-lg-3 card-span pt-6">
+                    <div class="text-center text-md-start card-hover"><img class="ps-3 icons" src={{ url_for('static', filename='/img/icons/planting.svg')}} height="60" alt="" />
+                      <div class="card-body">
+                        <h6 class="fw-bold fs-1 heading-color">Patek antaknosa</h6>
+                        <p class="mt-3 mb-md-0 mb-lg-2">Penyakit ini disebabkan cendawan colletotrichum capsici. Terdapat dua macam penyakit busuk yang biasa meyerang tanaman cabai, yaitu busuk cabang dan busuk kuncup. Busuk cabang pada tanaman cabai disebabkan phytophthora capsiti. Penyakit ini terjadi pada musim hujan dan proses penyebarannya sangat cepat.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                  <div class="card h-100 shadow px-4 px-md-2 px-lg-3 card-span pt-6">
+                    <div class="text-center text-md-start card-hover"><img class="ps-3 icons" src={{ url_for('static', filename='/img/icons/planting.svg') }} height="60" alt="" />
+                      <div class="card-body">
+                        <h6 class="fw-bold fs-1 heading-color">Penyakit layu</h6>
+                        <p class="mt-3 mb-md-0 mb-lg-2">Penyakit layu merupakan salah penyakit yang dialami tanaman cabai dan cukup sulit dikendalikan. Penyakit layu disebabkan beragam pengganggu tanaman seperti berbagai jenis cendawan dan bakteri layu yang disebabkan cendawan disebut fusarium. Jenis cendawan ini hidup pada lingkungan yang masam.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-5" id="Detection">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-9 mb-3">
+              <div class="row">
+                <div class="col-lg-9 mb-3">
+                  <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Deteksi Daun Cabai!</h5>
+                  <p class="mb-5">Silahkan upload daun cabai anda untuk mengidentifikasi daun cabai atau aktifkan kamera anda untuk mengidentifikasi daun cabai!</p>
+                </div>
+                <div class="col-md-6 mb-5">
+                  <div class="card text-white"><img class="card-img" src={{ url_for('static', filename='/img/gallery/cabai2.png') }} alt="..." />
+                    <div class="card-img-overlay d-flex flex-column justify-content-center px-5 px-md-3 px-lg-5 bg-dark-gradient">
+                      <!-- <h6 class="text-success pt-2">NEW FARM TODAY</h6> -->
+                      <hr class="text-white" style="height:0.12rem;width:2.813rem" />
+                      <div class="pt-lg-3">
+                        <h6 class="fw-bold text-white fs-1 fs-md-2 fs-lg-3 w-xxl-30">Uploads Gambar Daun Cabai!</h6>
+                        <br>
+                        <form action="/predict" method="post" enctype="multipart/form-data" onsubmit="showloading()">
+                            <input type="file" name="image" class="uploads">
+                            <br>
+                            <br>
+                            <input type="submit" class="btn btn-default btn-light text-success" value="Predict">
+                        </form>
+                    </div>
+                    
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="col-md-6 mb-5">
+                  <div class="card text-white"><img class="card-img" src="static/img/gallery/cabai2.png" alt="..." />
+                    <div class="card-img-overlay d-flex flex-column justify-content-center px-5 px-md-3 px-lg-5 bg-dark-gradient"> -->
+                      <!-- <h6 class="text-success pt-2">NEW FARM TODAY</h6> -->
+                      <!-- <hr class="text-white" style="height:0.12rem;width:2.813rem" />
+                      <div class="pt-lg-3">
+                        <h6 class="fw-bold text-white fs-1 fs-md-2 fs-lg-3 w-xxl-50">Identifikasi Daun Cabai real-time!</h6>
+                        <p class="w-xxl-75"></p><button class="btn btn-lg btn-light text-success" type="button">Browse Farm</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>end of .container -->
+      </section><!-- <section> close ============================-->
+      <!-- ============================================-->
+
+      <section class="py-0">
+        <div class="bg-holder" style="background-image:url(static/img/illustrations/how-it-works.png);background-position:center bottom;background-size:cover;"></div>
+        <!--/.bg-holder-->
+        <div class="container-lg">
+          <div class="row justify-content-center">
+            <div class="col-sm-8 col-md-9 col-xl-5 text-center pt-8">
+              <h5 class="fw-bold fs-3 fs-xxl-5 lh-sm mb-3 text-white">Cara Kerja:</h5>
+              <p class="mb-5 text-white"></p>
+            </div>
+            <div class="col-sm-9 col-md-12 col-xxl-9">
+              <div class="theme-tab">
+                <ul class="nav justify-content-between">
+                  <li class="nav-item" role="presentation"><a class="nav-link active fw-semi-bold" href="#bootstrap-tab1" data-bs-toggle="tab" data-bs-target="#tab1" id="tab-1"><span class="nav-item-circle-parent"><span class="nav-item-circle">01</span></span></a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link fw-semi-bold" href="#bootstrap-tab2" data-bs-toggle="tab" data-bs-target="#tab2" id="tab-2"><span class="nav-item-circle-parent"><span class="nav-item-circle">02</span></span></a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link fw-semi-bold" href="#bootstrap-tab3" data-bs-toggle="tab" data-bs-target="#tab3" id="tab-3"><span class="nav-item-circle-parent"><span class="nav-item-circle">03</span></span></a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link fw-semi-bold" href="#bootstrap-tab4" data-bs-toggle="tab" data-bs-target="#tab4" id="tab-4"><span class="nav-item-circle-parent"><span class="nav-item-circle">04</span></span></a></li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab-1">
+                    <div class="row align-items-center my-6 mx-auto">
+                      <div class="col-md-6 col-lg-5 offset-md-1">
+                        <h3 class="fw-bold lh-base text-white">Pilih gambar yang akan di uploads</h3>
+                      </div>
+                      <div class="col-md-5 text-white offset-lg-1">
+                        <p class="mb-0">Pemilihan gambar dapat berupa PNG, JPG dengan gambar yang baik dan tidak blur untuk didapatkan hasil deteksi yang tepat</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab-2">
+                    <div class="row align-items-center my-6 mx-auto">
+                      <div class="col-md-6 col-lg-5 offset-md-1">
+                        <h3 class="fw-bold lh-base text-white">Uploads gambar lalu tunggu sebentar</h3>
+                      </div>
+                      <div class="col-md-5 text-white offset-lg-1">
+                        <p class="mb-0">Hasil gambar akan di tampilkan setelah proses berlangsung</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab-3">
+                    <div class="row align-items-center my-6 mx-auto">
+                      <div class="col-md-6 col-lg-5 offset-md-1">
+                        <h3 class="fw-bold lh-base text-white">Hasil deteksi daun akan di tampilkan</h3>
+                      </div>
+                      <div class="col-md-5 text-white offset-lg-1">
+                        <p class="mb-0">Hasil akan di tampilkan bersamaan dengan penyakit pada daun</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab-4">
+                    <div class="row align-items-center my-6 mx-auto">
+                      <div class="col-md-6 col-lg-5 offset-md-1">
+                        <h3 class="fw-bold lh-base text-white">Lakukan Pengulangan jika dengan gambar yang berbeda</h3>
+                      </div>
+                      <div class="col-md-5 text-white offset-lg-1">
+                        <p class="mb-0">Hasil pada setiap jenis daun cabai yang berbeda memungkinkan menghasilkan hasil detesksi yang sama</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-8" id="News">
+        <div class="container-lg">
+          <div class="row flex-center">
+            <div class="col-12 col-lg-10 col-xl-12">
+              <div class="bg-holder" style="background-image:url(static/img/illustrations/testimonial-bg.png);background-position:top left;background-size:120px 83px;"></div>
+              <!--/.bg-holder-->
+              <h6 class="fs-3 fs-lg-4 fw-bold lh-sm">Berita Terkini<br />Untuk kamu</h6>
+            </div>
+            <div class="carousel slide pt-3" id="carouselExampleDark" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <div class="row h-100 mx-3 mx-sm-5 mx-md-4 my-md-7 m-lg-7 mt-7">
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card h-100 shadow">
+                        <div class="card-body my-3">
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-1.png') }} width="50" alt="" />
+                            <div class="flex-1 align-items-center pt-2">
+                              <h5 class="mb-0 fw-bold text-success">Fernando Soler</h5>
+                              <p class="fw-normal text-black">Telecommunication Engineer</p>
+                            </div>
+                          </div>
+                          <p class="mb-0 px-3 px-md-2 px-xxl-3">&quot;Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card h-100 shadow">
+                        <div class="card-body my-3">
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-2.png') }} width="50" alt="" />
+                            <div class="flex-1 align-items-center pt-2">
+                              <h5 class="mb-0 fw-bold text-success">Ilone Pickford</h5>
+                              <p class="fw-normal text-black">Head of Agrogofund </p>
+                            </div>
+                          </div>
+                          <p class="mb-0 px-3 px-md-2 px-xxl-3">&quot;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card h-100 shadow">
+                        <div class="card-body my-3">
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-3.png' )}} width="50" alt="" />
+                            <div class="flex-1 align-items-center pt-2">
+                              <h5 class="mb-0 fw-bold text-success">Ed O’Brien</h5>
+                              <p class="fw-normal text-black">Herbalist</p>
+                            </div>
+                          </div>
+                          <p class="mb-0 px-3 px-md-2 px-xxl-3">&quot;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <div class="row h-100 mx-3 mx-sm-5 mx-md-4 my-md-7 m-lg-7 mt-7">
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card h-100 shadow">
+                        <div class="card-body my-3">
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-1.png')}} width="50" alt="" />
+                            <div class="flex-1 align-items-center pt-2">
+                              <h5 class="mb-0 fw-bold text-success">Fernando Soler</h5>
+                              <p class="fw-normal text-black">Telecommunication Engineer</p>
+                            </div>
+                          </div>
+                          <p class="mb-0 px-3 px-md-2 px-xxl-3">&quot;Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card h-100 shadow">
+                        <div class="card-body my-3">
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-2.png')}} width="50" alt="" />
+                            <div class="flex-1 align-items-center pt-2">
+                              <h5 class="mb-0 fw-bold text-success">Ilone Pickford</h5>
+                              <p class="fw-normal text-black">Head of Agrogofund Groups </p>
+                            </div>
+                          </div>
+                          <p class="mb-0 px-3 px-md-2 px-xxl-3">&quot;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card h-100 shadow">
+                        <div class="card-body my-3">
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-3.png')}} width="50" alt="" />
+                            <div class="flex-1 align-items-center pt-2">
+                              <h5 class="mb-0 fw-bold text-success">Ed O’Brien</h5>
+                              <p class="fw-normal text-black">Herbalist</p>
+                            </div>
+                          </div>
+                          <p class="mb-0 px-3 px-md-2 px-xxl-3">&quot;Ui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row h-100 mx-3 mx-sm-5 mx-md-4 my-md-7 m-lg-7 mt-7">
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card h-100 shadow">
+                        <div class="card-body my-3">
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-1.png')}} width="50" alt="" />
+                            <div class="flex-1 align-items-center pt-2">
+                              <h5 class="mb-0 fw-bold text-success">Fernando Soler</h5>
+                              <p class="fw-normal text-black">Telecommunication Engineer</p>
+                            </div>
+                          </div>
+                          <p class="mb-0 px-3 px-md-2 px-xxl-3">&quot;Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card h-100 shadow">
+                        <div class="card-body my-3">
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-2.png') }} width="50" alt="" />
+                            <div class="flex-1 align-items-center pt-2">
+                              <h5 class="mb-0 fw-bold text-success">-</h5>
+                              <p class="fw-normal text-black">-</p>
+                            </div>
+                          </div>
+                          <p class="mb-0 px-3 px-md-2 px-xxl-3">&quot;-</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card h-100 shadow">
+                        <div class="card-body my-3">
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-3.png') }} width="50" alt="" />
+                            <div class="flex-1 align-items-center pt-2">
+                              <h5 class="mb-0 fw-bold text-success">-</h5>
+                              <p class="fw-normal text-black">-</p>
+                            </div>
+                          </div>
+                          <p class="mb-0 px-3 px-md-2 px-xxl-3">&quot;-</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row px-3 px-sm-6 px-md-0 px-lg-5 px-xl-4">
+                <div class="col-12 position-relative"><a class="carousel-control-prev carousel-icon z-index-2" href="#carouselExampleDark" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next carousel-icon z-index-2" href="#carouselExampleDark" role="button" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- ============================================-->
+<!-- Bagian Halaman (Anggota Kelompok) -->
+<div id="Team" class="container-fluid text-center">
+  <br><br><br>
+  <h2>ANGGOTA KELOMPOK 3 INSIGHT </h2>
+  <h4>Tim Deployment dan Tim NLP</h4>
+  <br>
+  <div class="row row-cols-auto slideanim">
+    <div class="col-sm">
+      <span>
+        <img class="border border-success border-3 rounded-circle" src={{ url_for('static', filename='img/gallery/yunus.JPG') }} height="200">
+      </span>
+      <h4></svg>&nbsp;&nbsp;<a class="text-dark" href="https://github.com/AhmadYunus299" target="_blank">Ahmad Yunus</a></p></h4>
+      <p>STMIK Mardira Indonesia</p>
+    </div>
+    <div class="col-sm">
+      <span>
+        <img class="border border-success border-3 rounded-circle" src={{ url_for('static', filename='img/gallery/abdu.JPG') }} height="200"></img>
+      </span>
+      <h4></svg>&nbsp;&nbsp;<a class="text-dark" href="https://github.com/rahayumaharani" target="_blank">Muhammad Abdu Syakur</a></p></h4>
+      <p>STMIK Bandung</p>
+    </div>
+    <div class="col-sm">
+      <span>
+        <img class="border border-success border-3 rounded-circle" src={{ url_for('static', filename='img/gallery/meli.JPG') }} height="200" ></img>
+      </span>
+      <h4></svg>&nbsp;&nbsp;<a class="text-dark" href="https://github.com/rahayumaharani" target="_blank">Meliana Lalita</a></p></h4>
+      <p>Universitas Pendidikan Indonesia</p>
+    </div>
+    <div class="col-sm">
+      <span>
+        <img class="border border-success border-3 rounded-circle" src={{ url_for('static', filename='img/gallery/ayu.JPG') }} height="200" ></img>
+      </span>
+      <h4></svg>&nbsp;&nbsp;<a class="text-dark" href="https://github.com/rahayumaharani" target="_blank">Rahayu Maharani</a></p></h4>
+    <p>Universitas Presiden</p>
+    </div>
+  </div>	    
+</div>
+</div>
+
+<!-- ============================================-->
+<!-- ============================================-->
+      <!-- <section> begin ============================-->
+        <section class="z-index-1 cta">
+          <div class="container">
+            <div class="row flex-center">
+              <div class="col-12">
+                <div class="card shadow h-100 py-5">
+                  <div class="card-body text-center">
+                    <h1 class="fw-semi-bold mb-4">Solusi pada &nbsp;<span class="text-success">Tumbuhan Pertanian Cabai </span> &nbsp; adalah Ins</h1>
+                    <!-- <a class="btn btn-lg btn-success px-6" href="#" role="button">Kembali ke Beranda</a> -->
+                    <a href="#" title="To Top">
+                      <img src={{ url_for('static', filename='img/gallery/angle.png')}} width="30px">
+                    </a>
+                    <p>TOP</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end of .container-->
+        </section><!-- <section> close ============================-->
+          
+        <!-- ============================================-->
+        <section class="py-0" id="About">
+          <div class="bg-holder" style="background-image:url(static/img/illustrations/footer-bg.png);background-position:center;background-size:cover;"></div>
+          <!--/.bg-holder-->
+          <div class="container">
+            <div class="row justify-content-lg-between min-vh-20" style="padding-top:21rem">
+              <div class="col-6 col-sm-4 col-lg-auto mb-3"></div>
+            </div>
+            <hr class="text-300 mb-0" />
+            <div class="row flex-center py-5">
+              <div class="col-12 col-sm-8 col-md-6 text-center text-md-start"> <a class="text-decoration-none" href="#"><img class="d-inline-block align-top img-fluid" src={{ url_for('static', filename='/img/gallery/logo-icon.png') }} alt="" width="40" /><span class="text-theme font-monospace fs-3 ps-2">Ins</span></a></div>
+              <div class="col-12 col-sm-8 col-md-6">
+                <p class="fs--1 text-dark my-2 text-center text-md-end">&copy; copyright&nbsp;<svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#76C279" viewBox="0 0 16 16">
+                    <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
+                  </svg>&nbsp;by&nbsp;<a class="text-dark" href="https://themewagon.com/" target="_blank">ChilliIns </a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main><!-- ===============================================-->
+      <!--    End of Main Content-->
+      <!-- ===============================================-->
+  
+      <!-- ===============================================-->
+      <!--    JavaScripts-->
+      <!-- ===============================================-->
+      <script src={{ url_for('static', filename='@popperjs/popper.min.js') }} ></script>
+      <script src={{ url_for('static', filename='/bootstrap/bootstrap.min.js') }} ></script>
+      <script src={{ url_for('static', filename='/is/is.min.js') }} ></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+      <script src={{ url_for('static', filename='/js/theme.js') }}></script>
+      <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&amp;display=swap" rel="stylesheet">
+    </body>
+  
+  </html>

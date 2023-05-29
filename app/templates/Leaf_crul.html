@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>Chili LEAF DISEASE PREDICTION</title>
+
+
+
+ <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href={{ url_for('static', filename='img/gallery/logo-icon.png') }}>
+    <link rel="icon" type="image/png" sizes="32x32" href={{ url_for('static', filename='img/gallery/logo-icon.png') }}>
+    <link rel="icon" type="image/png" sizes="16x16" href={{ url_for('static', filename='img/gallery/logo-icon.png') }}>
+    <link rel="shortcut icon" type="image/x-icon" href={{ url_for('static', filename='/img/gallery/logo-icon.png') }}>
+    <link rel="manifest" href={{ url_for('static', filename='/img/favicons/manifest.json') }}>
+    <meta name="msapplication-TileImage" content={{ url_for('static', filename='/img/favicons/mstile-150x150.png') }}>
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+		
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = '/img/illustrations/how-it-works.png')}}">
+
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem">Predict Chili Leaf Disease & Get Cure</h1>
+    </div>
+
+   <br>
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src={{url_for('static', filename = 'uploads/FLIPV-images (22)a.jpg' )}} alt="User Image" style="width:500px;height:500px;">
+                    
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+					
+					<h4><b> Treatment : </b> </h4>
+                    <h6>
+
+					Many fungicides are registered to control of target spot on Chilies. Growers should consult regional disease management guides for recommended products. Products containing chlorothalonil, mancozeb, and copper oxychloride have been shown to provide good control of target spot in research trials
+					
+					<br>
+
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
