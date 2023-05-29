@@ -25,7 +25,7 @@ model.add(Dense(512, activation="relu"))
 model.add(Dense(7, activation="softmax", name="classification"))
 
 # Load the model weights
-model.load_weights('app/model_detect1.h5')
+model.load_weights('model_detect1.h5')
 print("Model weights loaded successfully.")
 
 # Define the prediction function

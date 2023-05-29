@@ -17461,15 +17461,15 @@ label {
 @font-face {
   font-family: 'Circular Std';
   src: url("../fonts/Poppins-BlackItalic.ttf");
-  src: local("Poppins-BlackItalic"), local("Poppins-BlackItalic"), url("../fonts/Poppins-BlackItalic.ttf?#iefix") format("embedded-opentype"), url("../fonts/Poppins-BlackItalic.ttf") format("woff2"), url("../fonts/Poppins-BlackItalic.ttf") format("woff"), url("../fonts/CircularStd-BoldItalic.ttf") format("truetype");
+  src: local("Poppins-BlackItalic"), local("Poppins-BlackItalic"), url("../fonts/Poppins-BlackItalic.ttf?#iefix") format("embedded-opentype"), url("../fonts/Poppins-BlackItalic.ttf") format("woff2"), url("../fonts/Poppins-BlackItalic.ttf") format("woff"), url("../fonts/Poppins-BlackItalic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Circular Std Book';
-  src: url("../fonts/CircularStd-Book.eot");
-  src: local("Circular Std Book"), local("CircularStd-Book"), url("../fonts/CircularStd-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-Book.woff2") format("woff2"), url("../fonts/CircularStd-Book.woff") format("woff"), url("../fonts/CircularStd-Book.ttf") format("truetype");
+  src: url("../fonts/Poppins-Thin.ttf");
+  src: local("Poppins-Thin"), local("Poppins-Thin.ttf"), url("../fonts/Poppins-Thin.ttf?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Thin.ttf") format("woff2"), url("../fonts/Poppins-Thin.ttf") format("woff"), url("../fonts/Poppins-Thin.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
