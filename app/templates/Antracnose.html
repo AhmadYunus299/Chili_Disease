@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
         integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
 
-    <title>PRAKIRAAN PENYAKIT DAUN CABAI</title>
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>Prediksi Penyakit</title>
 
      <!--    Favicons-->
     <!-- ===============================================-->
@@ -20,50 +23,40 @@
     <meta name="msapplication-TileImage" content={{ url_for('static', filename='/img/favicons/mstile-150x150.png') }}>
     <meta name="theme-color" content="#ffffff">
 
-
     <style>
         * {
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         .border img {
             border-radius: 15px;
             border: 2px solid black;
         }
-		
     </style>
 </head>
 
 <body background="{{url_for('static',filename = '/img/illustrations/how-it-works.png')}}">
 
-
-
     <div>
-        <h1 style="text-align:center;font-size:4rem">Prediksi Penyakit Daun Cabai & Obatnya</h1>
+        <br>
+        <h1 style="text-align:center" class="fw-semi-bold mb-4">Prediksi&nbsp;<span class="text-light"> Penyakit </span> &nbsp; Daun Cabai & Obatnya</h1>
     </div>
-
-   <br>
-   <br>
-
+    <br>
 
     <div class="container my-2">
         <div class="row mb-5">
-
             <div class="col-sm" style="margin-bottom: 23px;">
                 <span class="border border-primary">
                     <img src={{url_for('static', filename = '/uploads/FLIPV-Anthracnose_disease_in_chilli_after_cut.jpeg' )}} alt="User Image" style="width:500px;height:500px;">
-                    
-
                 </span>
             </div>
-
             <div class="col-sm">
-
                 <div>
-                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
-                        class="text-center mb-5 content-h1 rounded">
+                    <h1 style="padding: 15px; background-color: rgb(252, 255, 253); color: rgb(63, 170, 9);"
+                        class="text-center mb-5 content-h1 rounded ">
                         {{pred_output}} </h1>
                 </div>
                 <div class="details">

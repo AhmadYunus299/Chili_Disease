@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
@@ -45,9 +47,7 @@
               <li class="nav-item px-2"><a class="nav-link fw-medium" href="#Team">Team</a></li>
               <li class="nav-item px-2"><a class="nav-link fw-medium" href="#About">About </a></li>
             </ul>
-            <!-- <div class="container"><a class="navbar-brand" href="index.html"><img class="d-inline-block align-top img-fluid" src="static/img/gallery/logo-icon1.png" alt="" width="50" /><span class="text-theme font-monospace fs-4 ps-1">Ins</span></a><button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> -->
-            <!-- <form class="d-flex"><button class="btn btn-lg btn-dark bg-gradient order-0" type="submit">Welcome</button></form> -->
-          </div>
+            </div>
         </div>
       </nav>
       <section class="py-0" id="Home">
@@ -59,7 +59,6 @@
           <div class="row align-items-center min-vh-75 min-vh-lg-100">
             <div class="col-md-7 col-lg-6 col-xxl-5 py-6 text-sm-start text-center">
               <h1 class="fw-semi-bold mb-4">Deteksi&nbsp;<span class="text-success"> Penyakit </span> &nbsp; Pada Daun Cabai</h1>
-              <!-- <h1 class="mt-6 mb-sm-4 fw-semi-bold lh-sm fs-4 fs-lg-5 fs-xl-6">Deteksi Penyakit Pada Daun Cabai<br class="d-block d-lg-block" /></h1> -->
               <p class="mb-4 fs-1">Penyakit yang menyerang tanaman daun cabai biasanya disebabkan oleh virus, bakteri, cendawan maupun jamur. Pada blog ini anda bisa mengidentifikasi penyakit pada daun cabai dengan sangat mudah.</p><a class="btn btn-lg btn-success" href="#Detection" role="button">Deteksi Tanaman</a>
             </div>
           </div>
@@ -124,22 +123,81 @@
               <div class="row">
                 <div class="col-lg-9 mb-3">
                   <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Deteksi Daun Cabai!</h5>
-                  <p class="mb-5">Silahkan upload daun cabai anda untuk mengidentifikasi daun cabai atau aktifkan kamera anda untuk mengidentifikasi daun cabai!</p>
-                </div>
-                <div class="col-md-6 mb-5">
-                  <div class="card text-white"><img class="card-img" src={{ url_for('static', filename='/img/gallery/cabai2.png') }} alt="..." />
-                    <div class="card-img-overlay d-flex flex-column justify-content-center px-5 px-md-3 px-lg-5 bg-dark-gradient">
-                      <!-- <h6 class="text-success pt-2">NEW FARM TODAY</h6> -->
-                      <hr class="text-white" style="height:0.12rem;width:2.813rem" />
-                      <div class="pt-lg-3">
-                        <h6 class="fw-bold text-white fs-1 fs-md-2 fs-lg-3 w-xxl-30">Uploads Gambar Daun Cabai!</h6>
-                        <br>
+                  <p class="mb-0">Silahkan upload daun cabai anda untuk mengidentifikasi penyakit pada daun cabai !</p>
+                  </div>
+                  <div class="col-md-6 mb-5">
+                    <div class="card text-white">
+                      <div class="position-relative" style="width: 130%; height: 0; padding-bottom: 100%; overflow: hidden;">
+                        <img class="card-img" src="{{ url_for('static', filename='/img/gallery/cabai2.png') }}" alt="..." style="position: absolute; top: 10%; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        <div class="card-img-overlay d-flex flex-column justify-content-center px-5 px-md-5 px-lg-5 bg-dark-gradient" style="width: 100%; height: 100%;">
+                          <hr class="text-white" style="height: 0.15rem; width: 2.813rem">
+                          <div class="pt-lg-"> 
+                            <h6 class="fw-bold text-white fs-1 fs-md-2 fs-lg-3 w-xxl-30">Uploads Gambar Daun Cabai!</h6><br>
+                        <style>
+                          .drop-zone {
+                            border: 2px dashed #ccc;
+                            padding: 20px;
+                            text-align: center;
+                            cursor: pointer;
+                          }
+                        
+                          .drop-zone.dragged {
+                            background-color: #f0f0f0;
+                          }
+                        
+                          .drop-icon {
+                            font-size: 48px;
+                            margin-bottom: 10px;
+                          }
+                        
+                          .center-button {
+                            display: flex;
+                            justify-content: center;
+                          }
+                        
+                          @media screen and (max-width: 768px) {
+                            .drop-zone {
+                              padding: 10px;
+                            }
+                          
+                            .drop-icon {
+                              font-size: 36px;
+                            }
+                          }
+                        </style>
+                        
                         <form action="/predict" method="post" enctype="multipart/form-data" onsubmit="showloading()">
-                            <input type="file" name="image" class="uploads">
-                            <br>
-                            <br>
+                          <div class="drop-zone" id="dropZone" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleFileDrop(event)">
+                            <i class="fas fa-cloud-upload-alt drop-icon"></i>
+                            <p>Drag and drop file here or click to upload</p>
+                            <input type="file" name="image" class="uploads" id="fileInput">
+                          </div>
+                          <br>
+                          <div class="center-button">
                             <input type="submit" class="btn btn-default btn-light text-success" value="Predict">
+                          </div>
                         </form>
+                        
+                        <script>
+                          function handleDragOver(event) {
+                            event.preventDefault();
+                            event.currentTarget.classList.add("dragged");
+                          }
+                        
+                          function handleDragLeave(event) {
+                            event.preventDefault();
+                            event.currentTarget.classList.remove("dragged");
+                          }
+                        
+                          function handleFileDrop(event) {
+                            event.preventDefault();
+                            event.currentTarget.classList.remove("dragged");
+                            const fileInput = document.getElementById("fileInput");
+                            fileInput.files = event.dataTransfer.files;
+                          }
+                        </script>
+                        
+                        
                     </div>
                     
                     </div>
@@ -228,7 +286,7 @@
                     <div class="col-md-4 mb-5 mb-md-0">
                       <div class="card h-100 shadow">
                         <div class="card-body my-3">
-                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-1.png') }} width="50" alt="" />
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/cabai.png') }} width="50" alt="" />
                             <div class="flex-1 align-items-center pt-2">
                               <h5 class="mb-0 fw-bold text-success">Fernando Soler</h5>
                               <p class="fw-normal text-black">Telecommunication Engineer</p>
@@ -241,7 +299,7 @@
                     <div class="col-md-4 mb-5 mb-md-0">
                       <div class="card h-100 shadow">
                         <div class="card-body my-3">
-                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-2.png') }} width="50" alt="" />
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/cabai.png') }} width="50" alt="" />
                             <div class="flex-1 align-items-center pt-2">
                               <h5 class="mb-0 fw-bold text-success">Ilone Pickford</h5>
                               <p class="fw-normal text-black">Head of Agrogofund </p>
@@ -254,7 +312,7 @@
                     <div class="col-md-4 mb-5 mb-md-0">
                       <div class="card h-100 shadow">
                         <div class="card-body my-3">
-                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-3.png' )}} width="50" alt="" />
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/cabai.png' )}} width="50" alt="" />
                             <div class="flex-1 align-items-center pt-2">
                               <h5 class="mb-0 fw-bold text-success">Ed O’Brien</h5>
                               <p class="fw-normal text-black">Herbalist</p>
@@ -271,7 +329,7 @@
                     <div class="col-md-4 mb-5 mb-md-0">
                       <div class="card h-100 shadow">
                         <div class="card-body my-3">
-                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-1.png')}} width="50" alt="" />
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/cabai.png')}} width="50" alt="" />
                             <div class="flex-1 align-items-center pt-2">
                               <h5 class="mb-0 fw-bold text-success">Fernando Soler</h5>
                               <p class="fw-normal text-black">Telecommunication Engineer</p>
@@ -284,7 +342,7 @@
                     <div class="col-md-4 mb-5 mb-md-0">
                       <div class="card h-100 shadow">
                         <div class="card-body my-3">
-                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-2.png')}} width="50" alt="" />
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/cabai.png')}} width="50" alt="" />
                             <div class="flex-1 align-items-center pt-2">
                               <h5 class="mb-0 fw-bold text-success">Ilone Pickford</h5>
                               <p class="fw-normal text-black">Head of Agrogofund Groups </p>
@@ -297,7 +355,7 @@
                     <div class="col-md-4 mb-5 mb-md-0">
                       <div class="card h-100 shadow">
                         <div class="card-body my-3">
-                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-3.png')}} width="50" alt="" />
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/cabai.png')}} width="50" alt="" />
                             <div class="flex-1 align-items-center pt-2">
                               <h5 class="mb-0 fw-bold text-success">Ed O’Brien</h5>
                               <p class="fw-normal text-black">Herbalist</p>
@@ -314,7 +372,7 @@
                     <div class="col-md-4 mb-5 mb-md-0">
                       <div class="card h-100 shadow">
                         <div class="card-body my-3">
-                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-1.png')}} width="50" alt="" />
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/cabai.png')}} width="50" alt="" />
                             <div class="flex-1 align-items-center pt-2">
                               <h5 class="mb-0 fw-bold text-success">Fernando Soler</h5>
                               <p class="fw-normal text-black">Telecommunication Engineer</p>
@@ -327,7 +385,7 @@
                     <div class="col-md-4 mb-5 mb-md-0">
                       <div class="card h-100 shadow">
                         <div class="card-body my-3">
-                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-2.png') }} width="50" alt="" />
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/cabai.png') }} width="50" alt="" />
                             <div class="flex-1 align-items-center pt-2">
                               <h5 class="mb-0 fw-bold text-success">-</h5>
                               <p class="fw-normal text-black">-</p>
@@ -340,7 +398,7 @@
                     <div class="col-md-4 mb-5 mb-md-0">
                       <div class="card h-100 shadow">
                         <div class="card-body my-3">
-                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/user-3.png') }} width="50" alt="" />
+                          <div class="align-items-xl-center d-block d-xl-flex px-3"><img class="img-fluid me-3 me-md-2 me-lg-3" src={{ url_for('static', filename='/img/gallery/cabai.png') }} width="50" alt="" />
                             <div class="flex-1 align-items-center pt-2">
                               <h5 class="mb-0 fw-bold text-success">-</h5>
                               <p class="fw-normal text-black">-</p>
@@ -363,6 +421,11 @@
 
 <!-- ============================================-->
 <!-- Page Section (Group Member) -->
+<style>
+  .social-media-icon {
+    margin-right: 10px; /* Menentukan jarak antara ikon */
+  }
+</style>
 <div id="Team" class="container-fluid text-center">
   <br><br><br>
   <h2>ANGGOTA KELOMPOK 3 INSIGHT </h2>
@@ -373,29 +436,42 @@
       <span>
         <img class="border border-success border-3 rounded-circle" src={{ url_for('static', filename='img/gallery/yunus.JPG') }} height="200">
       </span>
-      <h4></svg>&nbsp;&nbsp;<a class="text-dark" href="https://github.com/AhmadYunus299" target="_blank">Ahmad Yunus</a></p></h4>
+      <h4>Ahmad Yunus</h4>
       <p>STMIK Mardira Indonesia</p>
+      <a class="social-media-icon" href="https://github.com/AhmadYunus299"><span class="fab fa-github"></span></a>
+      <a class="social-media-icon" href="https://www.instagram.com/ahmad_yunus_319/"><span class="fab fa-instagram"></span></a>
+      <a class="social-media-icon" href="https://www.linkedin.com/in/ahmad-yunus/"><span class="fab fa-linkedin"></span></a>
+
     </div>
     <div class="col-sm">
       <span>
         <img class="border border-success border-3 rounded-circle" src={{ url_for('static', filename='img/gallery/abdu.JPG') }} height="200"></img>
       </span>
-      <h4></svg>&nbsp;&nbsp;<a class="text-dark" href="https://github.com/rahayumaharani" target="_blank">Muhammad Abdu Syakur</a></p></h4>
+      <h4>Muhammad Abdu Syakur</h4>
       <p>STMIK Bandung</p>
+      <a class="social-media-icon" href="https://github.com/Abdusyakur06/abdu"><span class="fab fa-github"></span></a>
+      <a class="social-media-icon" href="https://link_social_mendia_anda"><span class="fab fa-instagram"></span></a>
+      <a class="social-media-icon" href="https://www.linkedin.com/in/m-abdu-syakur-b25203267/"><span class="fab fa-linkedin"></span></a>
     </div>
     <div class="col-sm">
       <span>
         <img class="border border-success border-3 rounded-circle" src={{ url_for('static', filename='img/gallery/meli.JPG') }} height="200" ></img>
       </span>
-      <h4></svg>&nbsp;&nbsp;<a class="text-dark" href="https://github.com/rahayumaharani" target="_blank">Meliana Lalita</a></p></h4>
+      <h4>Meliana Lalita</h4>
       <p>Universitas Pendidikan Indonesia</p>
+      <a class="social-media-icon" href="https://github.com/seona27"><span class="fab fa-github"></span></a>
+      <a class="social-media-icon" href="https://link_social_mendia_anda"><span class="fab fa-instagram"></span></a>
+      <a class="social-media-icon" href="https://www.linkedin.com/in/meliana-lalita-putri-748087267/"><span class="fab fa-linkedin"></span></a>
     </div>
     <div class="col-sm">
       <span>
         <img class="border border-success border-3 rounded-circle" src={{ url_for('static', filename='img/gallery/ayu.JPG') }} height="200" ></img>
       </span>
-      <h4></svg>&nbsp;&nbsp;<a class="text-dark" href="https://github.com/rahayumaharani" target="_blank">Rahayu Maharani</a></p></h4>
-    <p>Universitas Presiden</p>
+      <h4>Rahayu Maharani</h4>
+      <p>Universitas Presiden</p>
+      <a class="social-media-icon" href="https://github.com/rahayumaharani"><span class="fab fa-github"></span></a>
+      <a class="social-media-icon" href="https://link_social_mendia_anda"><span class="fab fa-instagram"></span></a>
+      <a class="social-media-icon" href="https://www.linkedin.com/in/rahayumaharani/"><span class="fab fa-linkedin"></span></a>
     </div>
   </div>	    
 </div>
@@ -410,9 +486,8 @@
               <div class="col-12">
                 <div class="card shadow h-100 py-5">
                   <div class="card-body text-center">
-                    <h1 class="fw-semi-bold mb-4">Solusi pada &nbsp;<span class="text-success">Tumbuhan Pertanian Cabai </span> &nbsp; adalah Ins</h1>
-                    <!-- <a class="btn btn-lg btn-success px-6" href="#" role="button">Kembali ke Beranda</a> -->
-                    <a href="#" title="To Top">
+                    <h1 class="fw-semi-bold mb-4">Solusi pada <span class="text-success">Tumbuhan Pertanian Cabai</span> adalah Ins</h1>
+                      <a href="#" title="To Top">
                       <img src={{ url_for('static', filename='img/gallery/angle.png')}} width="30px">
                     </a>
                     <p>TOP</p>

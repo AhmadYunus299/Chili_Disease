@@ -17411,68 +17411,80 @@ label {
 }
 
 @font-face {
-  font-family: 'Circular Std';
+  font-family: 'Poppins';
   src: url("../fonts/Poppins-MediumItalic.ttf");
-  src: local("Poppins-MediumItalic"), local("Poppins-MediumItalic"), url("../fonts/Poppins-MediumItalic.ttf?#iefix") format("embedded-opentype"), url("../fonts/Poppins-MediumItalic.ttf") format("woff2"), url("../fonts/Poppins-MediumItalic.ttf") format("woff"), url("../fonts/Poppins-MediumItalic.ttf.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Circular Std';
+  font-family: 'Poppins';
   src: url("../fonts/Poppins-Black.ttf");
-  src: local("Poppins-Black"), local("Poppins-Black"), url("../fonts/Poppins-Black.ttf?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Black.ttf") format("woff2"), url("../fonts/Poppins-Black.ttf") format("woff"), url("../fonts/Poppins-Black.ttf.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Circular Std';
+  font-family: 'Poppins';
   src: url("../fonts/Poppins-Medium.ttf");
-  src: local("Poppins-Medium"), local("Poppins-Medium"), url("../fonts/Poppins-Medium.ttf?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Medium.ttf") format("woff2"), url("../fonts/Poppins-Medium.ttf") format("woff"), url("../fonts/Poppins-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Circular Std';
+  font-family: 'Poppins';
   src: url("../fonts/Poppins-Bold.ttf");
-  src: local("Poppins-Bold"), local("Poppins-Bold"), url("../fonts/Poppins-Bold.ttf?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Bold.ttf") format("woff2"), url("../fonts/Poppins-Bold.ttf") format("woff"), url("../fonts/CircularStd-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Circular Std';
+  font-family: 'Poppins';
   src: url("../fonts/Poppins-BlackItalic.ttf");
-  src: local("Poppins-BlackItalic"), local("Poppins-BlackItalic"), url("../fonts/Poppins-BlackItalic.ttf?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-BlackItalic.ttf") format("woff2"), url("../fonts/Poppins-BlackItalic.ttf") format("woff"), url("../fonts/Poppins-BlackItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Circular Std Book';
+  font-family: 'Poppins';
   src: url("../fonts/CircularStd-BookItalic.eot");
-  src: local("Circular Std Book Italic"), local("CircularStd-BookItalic"), url("../fonts/CircularStd-BookItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-BookItalic.woff2") format("woff2"), url("../fonts/CircularStd-BookItalic.woff") format("woff"), url("../fonts/CircularStd-BookItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Circular Std';
+  font-family: 'Poppins';
   src: url("../fonts/Poppins-BlackItalic.ttf");
-  src: local("Poppins-BlackItalic"), local("Poppins-BlackItalic"), url("../fonts/Poppins-BlackItalic.ttf?#iefix") format("embedded-opentype"), url("../fonts/Poppins-BlackItalic.ttf") format("woff2"), url("../fonts/Poppins-BlackItalic.ttf") format("woff"), url("../fonts/Poppins-BlackItalic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Circular Std Book';
+  font-family: 'Poppins';
   src: url("../fonts/Poppins-Thin.ttf");
-  src: local("Poppins-Thin"), local("Poppins-Thin.ttf"), url("../fonts/Poppins-Thin.ttf?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Thin.ttf") format("woff2"), url("../fonts/Poppins-Thin.ttf") format("woff"), url("../fonts/Poppins-Thin.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.border img {
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h4, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
 
 /* -------------------------------------------------------------------------- */
 /*                               Browser Fixing                               */
@@ -18323,6 +18335,9 @@ label {
     margin-bottom: -20rem;
   }
 }
+
+
+
 
 /*-----------------------------------------------
 |   User Styles
