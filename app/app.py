@@ -7,26 +7,13 @@ from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.applications.vgg16 import VGG16
-from tensorflow.keras.applications.xception import Xception
 from tensorflow.keras.layers import GlobalAveragePooling2D, Dropout, Dense, Flatten
 
 # Membuat instance Flask
 app = Flask(__name__, static_url_path='/static')
 
 # membuat model model
-# base_model = VGG16(input_shape=(224, 224, 3),
-#                    include_top=False,
-#                    weights='imagenet')
-
-# model = Sequential()
-# model.add(base_model)
-# model.add(GlobalAveragePooling2D())
-# model.add(Flatten())
-# model.add(Dropout(0.2))
-# model.add(Dense(1024, activation="relu"))
-# model.add(Dense(512, activation="relu"))
-# model.add(Dense(7, activation="softmax", name="classification"))
-base_model = Xception(input_shape=(224, 224, 3),
+base_model = VGG16(input_shape=(224, 224, 3),
                    include_top=False,
                    weights='imagenet')
 
@@ -34,16 +21,13 @@ model = Sequential()
 model.add(base_model)
 model.add(GlobalAveragePooling2D())
 model.add(Flatten())
-model.add(Dropout(0.5))
+model.add(Dropout(0.2))
 model.add(Dense(1024, activation="relu"))
 model.add(Dense(512, activation="relu"))
-model.add(Dense(256, activation="relu"))
-# model.add(Dense(128, activation="relu"))
-# model.add(Dense(64, activation="relu"))
 model.add(Dense(7, activation="softmax", name="classification"))
 
 # memuat model
-model.load_weights('model_detect2.h5')
+model.load_weights('app/model_detect.h5')
 print("Model loaded successfully.")
 
 # Fungsi prediksi
@@ -96,7 +80,7 @@ def predict():
         filename = file.filename
         print("@@ Input post =", filename)
 
-        file_path = os.path.join('static/uploads/', filename)
+        file_path = os.path.join('app/static/uploads/', filename)
         file.save(file_path)
 
         print("@@ Predict class...")
