@@ -27,7 +27,7 @@ model.add(Dense(512, activation="relu"))
 model.add(Dense(7, activation="softmax", name="classification"))
 
 # memuat model
-model.load_weights('model_detect2.h5')
+model.load_weights('app/model_detect.h5')
 print("Model loaded successfully.")
 
 # Fungsi prediksi
@@ -80,7 +80,7 @@ def predict():
         filename = file.filename
         print("@@ Input post =", filename)
 
-        file_path = os.path.join('static/uploads/', filename)
+        file_path = os.path.join('app/static/uploads/', filename)
         file.save(file_path)
 
         print("@@ Predict class...")

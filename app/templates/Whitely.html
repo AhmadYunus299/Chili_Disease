@@ -41,8 +41,14 @@
     </style>
 </head>
 
-    <body background="{{url_for('static',filename = '/img/illustrations/how-it-works.png')}}">
-
+<style>
+    body {
+        background-image: url("{{ url_for('static', filename='/img/illustrations/how-it-works.png') }}");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
     <div>
         <br>
         <h1 style="text-align:center" class="fw-semi-bold mb-4">Prediksi&nbsp;<span class="text-light"> Penyakit </span> &nbsp; Daun Cabai & Obatnya</h1>
